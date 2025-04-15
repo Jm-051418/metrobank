@@ -31,6 +31,14 @@ public class AccountSavings {
     @JoinColumn(name = "customer_Number")
     private Account account;
 
+    public AccountSavings() {
+    }
+
+    public AccountSavings(String accountType, double availableBalance) {
+        this.accountType = accountType;
+        this.availableBalance = availableBalance;
+    }
+
     public int getAccountNumber() {
         return accountNumber;
     }
@@ -53,5 +61,13 @@ public class AccountSavings {
 
     public void setAvailableBalance(double availableBalance) {
         this.availableBalance = availableBalance;
+    }
+
+    public Account getAccount() {
+        return account;
+    }
+
+    public void setAccount(Account account) {
+        this.account = account;
     }
 }
